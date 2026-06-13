@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="44%" r="80%">
+      <stop offset="0%" stop-color="#2a0a10"/><stop offset="55%" stop-color="#16060a"/><stop offset="100%" stop-color="#0b0b10"/>
+    </radialGradient>
+    <linearGradient id="steel" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e9eef6"/><stop offset="45%" stop-color="#aeb8c6"/><stop offset="100%" stop-color="#6c7686"/></linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f6d98a"/><stop offset="50%" stop-color="#e3a93a"/><stop offset="100%" stop-color="#a9721c"/></linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9e1f26"/><stop offset="100%" stop-color="#5e0f15"/></linearGradient>
+  </defs>
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <circle cx="256" cy="250" r="150" fill="#ef4450" opacity="0.09"/>
+  <g transform="translate(256 262) scale(0.66) translate(-256 -256)">
+    <g stroke-linecap="round">
+      <g transform="rotate(45 256 256)"><rect x="248" y="78" width="16" height="300" rx="6" fill="url(#steel)"/><polygon points="256,64 246,86 266,86" fill="#f4f7fb"/><rect x="226" y="356" width="60" height="16" rx="6" fill="url(#gold)"/><rect x="249" y="356" width="14" height="58" rx="6" fill="url(#gold)"/><circle cx="256" cy="418" r="11" fill="url(#gold)"/></g>
+      <g transform="rotate(-45 256 256)"><rect x="248" y="78" width="16" height="300" rx="6" fill="url(#steel)"/><polygon points="256,64 246,86 266,86" fill="#f4f7fb"/><rect x="226" y="356" width="60" height="16" rx="6" fill="url(#gold)"/><rect x="249" y="356" width="14" height="58" rx="6" fill="url(#gold)"/><circle cx="256" cy="418" r="11" fill="url(#gold)"/></g>
+    </g>
+    <path d="M256 150 L370 188 Q370 320 256 384 Q142 320 142 188 Z" fill="url(#shield)" stroke="url(#gold)" stroke-width="12" stroke-linejoin="round"/>
+    <path d="M256 150 L370 188 Q370 320 256 384 Z" fill="#000" opacity="0.16"/>
+    <path d="M256 214 L312 300 L256 276 L200 300 Z" fill="url(#gold)"/>
+    <circle cx="256" cy="196" r="13" fill="url(#gold)"/>
+  </g>
+</svg>
