@@ -1,6 +1,6 @@
 /* Ironvale service worker — offline-first cache for the single-file game.
    Bump CACHE_VERSION whenever you upload a new index.html so players get the update. */
-const CACHE_VERSION = 'ironvale-v35';
+const CACHE_VERSION = 'ironvale-v36';
 const ASSETS = [
   './',
   './index.html',
