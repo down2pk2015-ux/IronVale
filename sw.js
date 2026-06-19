@@ -1,6 +1,10 @@
-/* Ironvale service worker — offline-first cache for the single-file game.
-   Bump CACHE_VERSION whenever you upload a new index.html so players get the update. */
-const CACHE_VERSION = 'ironvale-v40';
+/* Ironvale service worker — always-fresh page, offline-capable.
+   You no longer need to bump CACHE_VERSION on every upload: the page is
+   revalidated against the network on each load (a conditional request that only
+   re-downloads when index.html actually changed), so new builds load by
+   themselves. Bumping the version below still works if you ever want to force a
+   full cache purge for all players. */
+const CACHE_VERSION = 'ironvale-v41';
 const ASSETS = [
   './',
   './index.html',
@@ -25,10 +29,12 @@ self.addEventListener('activate', e => {
 
 self.addEventListener('fetch', e => {
   if (e.request.method !== 'GET') return;
-  // network-first for the HTML so updates land; cache-first for everything else
+  // Always-fresh page: revalidate index.html / navigations against the network
+  // every load. {cache:'no-cache'} forces a conditional request, so the browser/CDN
+  // HTTP cache can no longer hand back a stale build. Falls back to cache when offline.
   if (e.request.mode === 'navigate' || e.request.url.endsWith('index.html')) {
     e.respondWith(
-      fetch(e.request).then(r => {
+      fetch(e.request, { cache: 'no-cache' }).then(r => {
         const copy = r.clone();
         caches.open(CACHE_VERSION).then(c => c.put(e.request, copy));
         return r;
