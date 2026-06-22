@@ -1,13 +1,11 @@
-[
-  {
-    "relation": ["delegate_permission/common.handle_all_urls"],
-    "target": {
-      "namespace": "android_app",
-      "package_name": "com.driftpostgames.ironvale",
-      "sha256_cert_fingerprints": [
-        "0A:83:CD:9E:9E:D1:5D:05:D1:96:5B:79:82:EB:82:B1:86:C9:94:B5:15:CF:BB:4B:50:1B:02:05:38:C5:94:12",
-        "C2:0A:13:84:26:E6:0D:31:81:87:56:91:0C:28:34:9F:46:04:49:26:AF:C1:3B:49:9F:97:E3:22:D3:66:2B:E3"
-      ]
-    }
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.driftpostgames.ironvale",
+    "sha256_cert_fingerprints": [
+      "0A:83:CD:9E:9E:D1:5D:05:D1:96:5B:79:82:EB:82:B1:86:C9:94:B5:15:CF:BB:4B:50:1B:02:05:38:C5:94:12",
+      "C2:0A:13:84:26:E6:0D:31:81:87:56:91:0C:28:34:9F:46:04:49:26:AF:C1:3B:49:9F:97:E3:22:D3:66:2B:E3"
+    ]
   }
-]
+}]
