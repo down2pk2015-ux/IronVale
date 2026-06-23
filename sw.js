@@ -4,7 +4,7 @@
    re-downloads when index.html actually changed), so new builds load by
    themselves. Bumping the version below still works if you ever want to force a
    full cache purge for all players. */
-const CACHE_VERSION = 'ironvale-v59';
+const CACHE_VERSION = 'ironvale-v60';
 const ASSETS = [
   './',
   './index.html',
